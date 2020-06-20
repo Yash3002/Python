@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Court</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .nav {
+            display: flex;
+        }
+
+        .logo {
+            height: 80px;
+            width: 100px;
+            margin-left: 20px;
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .link {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin-top: 40px;
+            margin-left: 420px;
+            justify-items: center;
+            font-style: bold;
+
+        }
+
+        #item {
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: blanchedalmond;
+        }
+
+        a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+
+        .parent {
+            background: url("main.jpg") no-repeat center center/cover;
+            height: 500px;
+            width: 1400px;
+            opacity: 0.9;
+            color: white;
+        }
+
+        .para {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 350px;
+            /* margin: auto; */
+            width: 700px;
+            flex-wrap: wrap;
+        }
+
+        .block {
+            display: flex;
+            width: 1350px;
+            margin: auto;
+            padding: 50px;
+            margin-top: -70px;
+            justify-content: center;
+            height: 400px;
+            color: blanchedalmond;
+        }
+
+        #portal {
+            color: rgb(71, 60, 60);
+            font-style: bold;
+            display: flex;
+            padding-top: 70px;
+            width: 100px;
+            font-size: 50px;
+            margin: auto;
+        }
+
+        .cards1 {
+            display: flex;
+            border: 2px solid teal;
+            margin: auto;
+            height: 200px;
+            background: url("menu.jpg") no-repeat center center/cover;
+            width: 200px;
+            /* opacity: 0.5; */
+            border-radius: 100%;
+            animation: zoomin 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+            box-shadow: 2px 2px 10px 10px lightgray;
+        }
+
+        .cards1:hover {
+            z-index: 100;
+            animation: zoomout 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+
+        }
+
+        .cards2 {
+            display: flex;
+            border: 2px solid teal;
+            color: yellow;
+            /* padding: 50px; */
+            box-shadow: 2px 2px 10px 10px lightgray;
+
+            background: url("order.jpg") no-repeat center center/cover;
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            animation: zoomin 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .cards2:hover {
+            z-index: 100;
+            animation: zoomout 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .cards3 {
+            display: flex;
+            border: 2px solid teal;
+            background-color: yellow;
+            /* padding: 50px; */
+            box-shadow: 2px 2px 10px 10px lightgray;
+            background: url("feedback.jpg") no-repeat center center/cover;
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            animation: zoomin 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .cards3:hover {
+            z-index: 100;
+            animation: zoomout 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+
+        }
+
+        @keyframes zoomout {
+            0% {
+                width: 200px;
+                height: 200px;
+                font-size: 30px;
+            }
+
+            100% {
+                font-size: 50px;
+                font-style: bold;
+                width: 250px;
+                height: 250px;
+                opacity: .8;
+            }
+        }
+
+        @keyframes zoomin {
+            0% {
+                width: 250px;
+                height: 250px;
+                font-size: 50px;
+                font-style: bold;
+            }
+
+            100% {
+                font-size: 30px;
+                width: 200px;
+                height: 200px;
+
+            }
+
+        }
+
+        h4 {
+            display: flex;
+            margin: auto;
+            color: black;
+        }
+
+        .rvb {
+            display: flex;
+            height: 500px;
+            width: auto;
+            display: flex;
+            margin-left: 200px;
+            /* background-color: black; */
+        }
+
+        #vini {
+            padding: 50px;
+            float: right;
+            /* box-shadow: 1px 1px 2px 2px lightgray; */
+            border-radius: 100%;
+            height: 300px;
+            margin-top: 16px;
+        }
+
+        #vt {
+            padding-right: 50px;
+            text-align: center;
+            width: 500px;
+            /* text-shadow: 1px 1px 20px 20px lightgray; */
+            font-size: 20px;
+            margin-left: 78px;
+            margin-top: 140px;
+        }
+
+        #amai {
+            padding: 60px;
+            float: right;
+            border-radius: 100%;
+            height: 305px;
+            /* box-shadow: 2px 2px 10px 10px lightgray; */
+            width: 300px;
+            margin-top: -96px;
+        }
+
+        #at {
+            padding-right: 50px;
+            text-align: center;
+            width: 500px;
+            font-size: 20px;
+            margin-left: 78px;
+            margin-top: 50px;
+        }
+
+        .review {
+            display: flex;
+            width: 100px;
+            margin: auto;
+            color: rgb(71, 60, 60);
+            font-size: 50px;
+        }
+
+        .serv {
+            display: flex;
+            /* position: absolute; */
+            margin: auto;
+            /* background-color: rgb(151, 148, 148); */
+            height: 300px;
+            margin-top: -10px;
+            width: 1350px;
+            padding: 50px;
+        }
+
+        #sh {
+            color: rgb(71, 60, 60);
+            display: flex;
+            width: 100px;
+            margin: auto;
+            margin-top: -55px;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .s1 {
+            display: flex;
+            border: 2px solid teal;
+            margin: auto;
+            height: 200px;
+            background: url("cod.png") no-repeat center center/cover;
+            width: 200px;
+            box-shadow: 2px 2px 10px 10px lightgray;
+            /* opacity: 0.5; */
+            border-radius: 100%;
+            animation: zoomin 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .s1:hover {
+            z-index: 100;
+            animation: zoomout 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+
+        }
+
+        .s2 {
+            display: flex;
+            border: 2px solid teal;
+            color: yellow;
+            box-shadow: 2px 2px 10px 10px lightgray;
+            /* padding: 50px; */
+            background: url("online.jpg") no-repeat center center/cover;
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            animation: zoomin 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .s2:hover {
+            z-index: 100;
+            animation: zoomout 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .s3 {
+            display: flex;
+            box-shadow: 2px 2px 10px 10px lightgray;
+            border: 2px solid teal;
+            background-color: yellow;
+            /* padding: 50px; */
+            background: url("fd.jpg") no-repeat center center/cover;
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            animation: zoomin 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .s3:hover {
+            z-index: 100;
+            animation: zoomout 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+
+        }
+
+        #btn {
+            display: flex;
+            width: 90px;
+            height: 32px;
+            margin-left: 225px;
+            margin-top: 18px;
+            background: transparent;
+        }
+
+        #log {
+            color: thistle;
+            font-size: 15px;
+            width: 100px;
+            margin: auto;
+        }
+
+        #btn2 {
+            display: flex;
+            width: 90px;
+            height: 32px;
+            margin-left: 8px;
+            margin-top: 18px;
+            background: transparent;
+        }
+
+        #sear {
+            margin-top: 10px;
+            margin-left: 20px;
+            font-size: 35px;
+        }
+
+        #moret {
+            color: black;
+            font-size: 15px;
+            width: 100px;
+            margin: auto;
+        }
+
+        #more {
+            border-radius: 50px;
+            display: flex;
+            width: 90px;
+            height: 32px;
+            margin: auto;
+            margin-top: -157px;
+            background: transparent;
+        }
+
+        .foot {
+            color: lightgrey;
+            display: flex;
+            background-color: rgb(12, 11, 11);
+            height: 250px;
+            margin-top: 50px;
+        }
+
+        #loc {
+            font-size: 20px;
+            margin-top: 35px;
+            margin-left: 50px;
+        }
+
+        #add {
+            margin-top: 70px;
+            margin-left: -100px;
+        }
+
+        #web {
+            display: flex;
+            font-size: 20px;
+            width: 200px;
+            /* margin: auto; */
+            position: absolute;
+            margin-top: 35px;
+            margin-left: 593px;
+        }
+
+        #sizei {
+            display: flex;
+            width: 200px;
+            margin-top: 70px;
+            margin-left: 400px;
+            height: 50px;
+            /* position: absolute; */
+        }
+
+        .con {
+            font-size: 20px;
+            margin-top: 35px;
+            margin-left: 400px
+        }
+
+        #phno {
+            margin-top: 70px;
+            margin-left: -120px;
+        }
+        #line{
+          color: azure;
+          margin-top: -110px;   
+          margin-left: 540px;  
+        }
+        #cop{
+            color: azure;
+          margin-top: 23px;   
+          margin-left: 579px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="parent">
+            <div class="nav">
+                <div>
+                    <img class="logo" src="logo.png" alt="LOGO">
+                </div>
+                <ul class="link">
+                    <li id="item"><a href="#">HOME</a></li>
+                    <li id="item"><a href="#">ABOUT</a></li>
+                    <li id="item"><a href="#">CONTACT</a></li>
+                    <li id="item"><a href="#">SERVICE</a></li>
+                </ul>
+                <button id="btn">
+                    <p id="log">LOG-IN</p>
+                </button>
+                <button id="btn2">
+                    <p id="log">SIGN-UP</p>
+                </button>
+                <p id="sear">&#128269;</p>
+            </div>
+            <div class="para">
+                <h1>Welcome To The Food Court</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero similique doloremque et consequuntur
+                    sunt atque cum earum quasi saepe nesciunt at veritatis aliquam totam libero amet incidunt natus
+                    beatae, reiciendis quibusdam officia ratione suscipit placeat. Omnis, hic. Explicabo cumque,
+                </p>
+            </div>
+        </div>
+    </header>
+    <section>
+        <hi id="portal">PORTALS</hi>
+        <div class="block">
+            <div class="cards1">
+                <h4>Menu</h4>
+            </div>
+            <div class="cards2">
+                <h4>Order</h4>
+            </div>
+            <div class="cards3">
+                <h4>Rating</h4>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h id="sh">
+            SEVICES
+        </h>
+        <div class="serv">
+            <div class="s1">
+                <h4>COD</h4>
+            </div>
+            <div class="s2">
+                <h4>Online</h4>
+            </div>
+            <div class="s3">
+                <h4>Free dilevary</h4>
+            </div>
+        </div>
+    </section>
+    <section>
+        <hi class="review">REVIEWS</hi>
+        <div class="rvb">
+            <p id="vt">''Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Vitae
+                provident quos, commodi ipsum
+                mollitia maxime reiciendis
+                cum aut ipsa voluptatibus nemo laboriosam debitis illum fugit, dolorum, minus alias. Repellendus iusto
+                inventore, accusamus fugit corporis sed quaerat mollitia ipsum dolorum rem
+                .''</p>
+            <img id="vini" src="vinit.png">
+        </div>
+    </section>
+    <section>
+        <div class="rvb">
+            <!-- <hi class="review">REVIEWS</hi> -->
+            <p id="at">''Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Vitae
+                provident quos, commodi ipsum
+                mollitia maxime reiciendis
+                cum aut ipsa voluptatibus nemo laboriosam debitis illum fugit, dolorum, minus alias. Repellendus iusto
+                inventore, accusamus fugit corporis sed quaerat mollitia ipsum dolorum rem
+                .''</p>
+            <img id="amai" src="amaan.png">
+        </div>
+        <button id="more">
+            <p id="moret">View More</p>
+        </button>
+    </section>
+    <footer class="foot">
+        <p id="loc">LOCATION</p>
+        <p id="add">Dargah Bazar Ajmer<br>Plot:-1333</p>
+        <p id="web">AROUND THE WEB</p>
+        <img id="sizei" src="icon.png" alt="">
+        <p class="con">CONTACT US</p>
+        <p id="phno">PH:-9001054316<br>9057224478</p>
+        
+        
+    </footer>
+    <p id=line>___________________________________</p>
+    <p id="cop">All right reserved by &copy; foodcourt</p>
+</body>
+
+</html>
