@@ -1,0 +1,518 @@
+        * {
+            margin: 0px;
+            padding: 0px;
+            scroll-behavior: smooth;
+        }
+
+        /* HEARDER CSS */
+
+        #main::before {
+            width: 100%;
+            opacity: 0.86;
+            position: absolute;
+            height: 100%;
+            content: "";
+            z-index: -1;
+            background: url("main.jpg") no-repeat center center/cover;
+        }
+
+        #nav{
+            position: fixed;
+            display: flex;
+            top: 0px;
+            width: 100%;
+            align-items: center;
+            /* grid-gap: 75px; */
+            /* grid-template-columns: 1fr 1.1fr 1fr; */
+            /* overflow: auto; */
+        }
+        #nav::before{
+            z-index: -1;
+            content: "";
+            display: flex;
+            opacity: 0.5;
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        .logo {
+            display: block;
+            padding: 10px;
+            /* border: 2px solid white;  */
+        }
+
+        .logo img {
+            height: 50px;
+            width: 100px;
+        }
+
+        .links {
+            display: block; 
+            color: white;
+            font-size: 1.5rem;
+
+        }
+        ul{
+            display: flex;
+        }
+        ul a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 8px;
+        }
+
+        ul a:hover {
+            color: #be8587;
+            text-decoration: underline;
+
+
+        }
+
+        .other {
+            color: white;
+            display: none;
+            border: 2px solid white;
+
+        }
+
+        .hsec {
+            color: white;
+            display: flex;
+            padding: 100px;
+            justify-content: center;
+            flex-direction: column;
+            font-family: 'Sriracha', cursive;
+        }
+
+        section p {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 1.4rem;
+            width: 650px;
+            margin: auto;
+        }
+
+        #sech1 {
+            display: block;
+            /* position: relative; */
+            margin-top: 70px;
+            color: aliceblue;
+            font-size: 1.8rem;
+            /* margin-left: 215px; */
+            text-align: center;
+        }
+
+        section button {
+            background: #cb2c30;
+            height: 30px;
+            width: 80px;
+            margin-top: 10px;
+            cursor: pointer;
+            margin-bottom: 250px;
+            font-size: 0.9rem;
+            font-family: 'Sriracha', cursive;
+            border-radius: 20%;
+        }
+
+        /* END OF HEADER CSS */
+
+        /* SERVICE CSS */
+
+        .ser {
+            display: grid;
+            grid-template-columns: 0fr 0fr 0fr;
+            width: 890px;
+            margin: auto;
+        }
+
+        #tser {
+            font-family: 'Sriracha', cursive;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .cards {
+            cursor: pointer;
+            margin: 30px;
+            width: 250px;
+            height: 250px;
+            box-shadow: 2px 2px 20px 6px rgb(201, 189, 189);
+            text-align: center;
+            border-radius: 20px;
+            animation: zoomin 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+            background-color: rgba(238, 236, 236, 0.863);
+        }
+
+        .cards:hover {
+            animation: zoomout 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        @keyframes zoomout {
+            0% {
+                background-color: rgba(238, 236, 236, 0.863);
+                width: 250px;
+                height: 250px;
+            }
+
+            100% {
+                width: 260px;
+                height: 260px;
+                background-color: #e4585d;
+
+            }
+        }
+
+        @keyframes zoomin {
+            0% {
+                background-color: #e4585d;
+                width: 260px;
+                height: 260px;
+            }
+
+            100% {
+                width: 250px;
+                height: 250px;
+                background-color: rgba(238, 236, 236, 0.863);
+
+
+            }
+        }
+
+        #cardt {
+            font-size: 30px;
+            font-family: 'Sriracha', cursive;
+        }
+
+        #sizei {
+            width: 220px;
+            height: 180px;
+            margin-top: 10px;
+            border-radius: 10%;
+            box-shadow: 2px 2px 5px 3px rgb(179, 171, 171);
+        }
+
+        /* END SERVICE CSS */
+        /* Portfolio CSS */
+        #port {
+            display: grid;
+            grid-template-columns: 0fr 0fr;
+        }
+
+        .cardp1 {
+
+            height: 500px;
+            width: 800px;
+            animation: zoominp 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+            background: url("1.jpg") no-repeat center center/cover;
+        }
+
+        .cardp1:hover {
+            animation: zoomoutp 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .cardp2 {
+            height: 500px;
+            width: 551px;
+            animation: zoomins 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+            background: url("2.jpg") no-repeat center center/cover;
+        }
+
+        .cardp2:hover {
+            animation: zoomouts 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        #port2 {
+            display: grid;
+            grid-template-columns: 0fr 0fr;
+        }
+
+        .cardp3 {
+            height: 500px;
+            width: 551px;
+            animation: zoomins 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+            background: url("3.jpg") no-repeat center center/cover;
+        }
+
+        .cardp3:hover {
+            animation: zoomouts 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .cardp4 {
+            height: 500px;
+            width: 800px;
+            animation: zoominp 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+            background: url("4.jpg") no-repeat center center/cover;
+        }
+
+        .cardp4:hover {
+            animation: zoomoutp 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        #port3 {
+            display: grid;
+            grid-template-columns: 0fr 0fr;
+        }
+
+        .cardp5 {
+            height: 500px;
+            width: 800px;
+            animation: zoominp 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+            background: url("5.jpg") no-repeat center center/cover;
+        }
+
+        .cardp5:hover {
+            animation: zoomoutp 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .cardp6 {
+            height: 500px;
+            width: 551px;
+            animation: zoomins 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+            background: url("6.jpg") no-repeat center center/cover;
+        }
+
+        .cardp6:hover {
+            animation: zoomouts 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        @keyframes zoomoutp {
+            0% {
+                width: 800px;
+                height: 510px;
+            }
+
+            100% {
+                z-index: 1;
+                box-shadow: 2px 2px 20px 2px black;
+                width: 800px;
+                height: 500px;
+
+            }
+        }
+
+        @keyframes zoominp {
+            0% {
+                z-index: 1;
+                box-shadow: 2px 2px 20px 2px black;
+                width: 800px;
+                height: 500px;
+            }
+
+            100% {
+                z-index: 0px;
+                width: 800px;
+                height: 510px;
+
+
+            }
+        }
+
+
+
+        @keyframes zoomouts {
+            0% {
+                width: 551px;
+                height: 510px;
+            }
+
+            100% {
+                z-index: 1;
+                box-shadow: 2px 2px 20px 2px black;
+                width: 551px;
+                height: 510px;
+
+            }
+        }
+
+        @keyframes zoomins {
+            0% {
+                z-index: 1;
+                box-shadow: 2px 2px 20px 2px black;
+                width: 551px;
+                height: 510px;
+            }
+
+            100% {
+                z-index: 0px;
+                width: 551px;
+                height: 510px;
+
+
+            }
+        }
+
+        #view {
+            background: #cb2c30;
+            height: 30px;
+            width: 80px;
+            margin: auto;
+            margin-top: 10px;
+            display: block;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-family: 'Sriracha', cursive;
+            border-radius: 20%;
+
+        }
+
+        /* END Portfolio CSS */
+        /* Booking CSS */
+        #book {
+            justify-content: center;
+            display: grid;
+            grid-gap: 50px;
+            /* border: 2px solid black; */
+            grid-template-columns: 0fr 0fr 0fr;
+        }
+
+        .cardb {
+            cursor: pointer;
+            width: 400px;
+            height: 280px;
+            text-align: center;
+            justify-content: center;
+            border-radius: 20%;
+            background-color: rgb(231, 224, 213);
+            box-shadow: 3px 3px 10px 2px rgb(143, 131, 131);
+            animation: zoominb 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+            /* border:2px solid black; */
+        }
+
+        .cardb:hover {
+            animation: zoomoutb 1s linear;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+
+        }
+
+        .sizebi {
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            width: 350px;
+            height: 200px;
+            border-radius: 20%;
+            height: 300;
+            box-shadow: 3px 3px 10px 2px rgb(143, 131, 131);
+        }
+
+        @keyframes zoomoutb {
+            0% {
+                background-color: rgba(238, 236, 236, 0.863);
+                width: 400px;
+                height: 280px;
+            }
+
+            100% {
+                width: 420px;
+                height: 300px;
+                background-color: #e4585d;
+
+            }
+        }
+
+        @keyframes zoominb {
+            0% {
+                background-color: #e4585d;
+                width: 420x;
+                height: 300px;
+            }
+
+            100% {
+                width: 400px;
+                height: 280px;
+                background-color: rgba(238, 236, 236, 0.863);
+            }
+        }
+
+
+        /* End Booking CSS */
+        /* ABOUT CSS */
+
+        #about {
+            display: grid;
+            justify-content: center;
+            grid-gap: 50px;
+            grid-template-columns: 0fr 0fr;
+            /* border: 2px solid black; */
+        }
+
+        /* End ABOUT CSS */
+        /* Footer CSS */
+        .foot {
+            font-family: 'Sriracha', cursive;
+            margin-top: 50px;
+            background-color: black;
+            display: grid;
+            height: auto;
+            color: blanchedalmond;
+            grid-template-columns: 1fr 1fr 1fr;
+            border: 2px solid black;
+        }
+
+        .left {
+            border: 2px solid black;
+        }
+
+        .center {
+            text-align: center;
+            border: 2px solid black;
+        }
+
+
+        .ft{
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        .soi {
+            margin-top: 20px;
+            width: 140px;
+            height: 50px;
+        }
+
+        .cont {
+            font-size: 1rem;
+        }
+        .line{
+            margin-top: 20px;
+        }
+        .copy{
+            display: block;
+            margin: auto;
+            width: 300px;
+        }
